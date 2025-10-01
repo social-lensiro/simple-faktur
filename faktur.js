@@ -53,7 +53,6 @@ function terbilang(n) {
     "delapan",
     "sembilan",
   ];
-
   function toWords(num) {
     if (num < 10) return satuan[num];
     if (num < 20) return num === 10 ? "sepuluh" : satuan[num - 10] + " belas";
@@ -71,28 +70,24 @@ function terbilang(n) {
       );
     return num;
   }
-
   return toWords(n).trim();
 }
 
 function cetakPDF() {
   window.print();
 }
-// 🗓️ Fungsi format tanggal Indonesia
+
+// Format tanggal Indonesia
 function formatTanggalIndo(tanggal) {
   const options = { day: "2-digit", month: "long", year: "numeric" };
   return new Date(tanggal).toLocaleDateString("id-ID", options);
 }
 
-// 🧭 Set tanggal invoice & jatuh tempo
+// Set tanggal & jatuh tempo
 window.addEventListener("DOMContentLoaded", () => {
   const today = new Date();
-
-  // Misalnya jatuh tempo 7 hari setelah tanggal faktur
   const jatuhTempo = new Date();
   jatuhTempo.setDate(today.getDate() + 14);
-
-  // Tampilkan ke elemen HTML
   document.getElementById("tanggalFaktur").textContent =
     formatTanggalIndo(today);
   document.getElementById("jatuhTempo").textContent =
