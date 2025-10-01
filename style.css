@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;    
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  width: 100%;              /* tombol full width */
+  font-size: 15px;
+}
+
+button[type="button"] {
+  background: #5e5f5e;
+}
+
+button[type="submit"] {
+  background: #70726d;
+  margin-top: 8px;          /* jarak antar tombol */
+}
+
+
+#daftarProduk {
+  margin-top: 10px;
+}
+
+.produk-box {
+ 
+  border-radius: 8px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.produk-box label {
+  font-weight: bold;
+}
+
+.produk-box input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.produk-box button {
+  padding: 8px 12px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.produk-box button:hover {
+  background-color: #344638;
+}
+/* bakrgorund belajang */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background: #f4f4f4;
+}
+
+/* Logo kiri */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 15%; /* agak kiri */
+  transform: translate(-50%, -50%);
+  background: url("logo.png") no-repeat center center;
+  background-size: 20vw; /* ukuran logo 20% dari lebar layar */
+  opacity: 0.08;
+  width: 20vw;
+  height: 20vw;
+  z-index: 0;
+}
+
+/* Logo kanan */
+body::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  right: 15%; /* agak kanan */
+  transform: translate(50%, -50%);
+  background: url("logo.png") no-repeat center center;
+  background-size: 20vw;
+  opacity: 0.08;
+  width: 20vw;
+  height: 20vw;
+  z-index: 0;
+}
+
+/* Form container */
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%; /* biar tetap muat di HP */
+  position: relative;
+  z-index: 1;
+}
+

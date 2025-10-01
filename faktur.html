@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faktur Penjualan</title>
+    <link rel="stylesheet" href="faktur.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="invoice-container">
+      <!-- Header -->
+      <header>
+        <div class="logo-company">
+          <img src="logo.png" alt="Logo Perusahaan" />
+          <div class="company-info">
+            <h2>PT Lensiro Digital Solusi</h2>
+            <p>
+              Jl Agus Salim No 7 Lumajang<br />
+              Telp: 0813 2612 9958<br />
+              Email: alvin.e@lensiro.com
+            </p>
+          </div>
+        </div>
+        <div class="invoice-info">
+          <p><strong>Nomor:</strong> <span id="nomorFaktur"></span></p>
+          <p><strong>Tanggal:</strong> <span id="tanggalFaktur"></span></p>
+        </div>
+      </header>
+
+      <!-- Pelanggan -->
+      <section class="customer-info">
+        <div>
+          <h3>Pelanggan</h3>
+          <p><strong>Nama:</strong> <span id="namaPelanggan"></span></p>
+          <p><strong>Alamat:</strong> <span id="alamatPelanggan"></span></p>
+          <p><strong>Telp:</strong> <span id="telpPelanggan"></span></p>
+        </div>
+        <div>
+          <h3>Jatuh Tempo</h3>
+          <p><span id="jatuhTempo">-</span></p>
+        </div>
+      </section>
+
+      <!-- Tabel Produk -->
+      <section>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Produk</th>
+                <th>Qty</th>
+                <th>Harga</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="tabelProduk"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="text-right">
+                  <strong>Subtotal</strong>
+                </td>
+                <td id="subtotal">Rp 0</td>
+              </tr>
+              <tr>
+                <td colspan="4" class="text-right"><strong>Total</strong></td>
+                <td id="total">Rp 0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p><strong>Terbilang:</strong> <span id="terbilang"></span></p>
+        <p>Terima kasih</p>
+
+        <!-- ✍️ Tanda Tangan Direktur + Stempel (Rata Kanan) -->
+        <div class="ttd-direktur">
+          <div class="ttd-box">
+            <p><strong>Hormat kami,</strong></p>
+            <div class="ttd-area">
+              <img src="stempel.png" alt="Stempel Perusahaan" class="stempel" />
+              <div class="ttd-space"></div>
+            </div>
+            <p class="nama-direktur">(<strong>Alvin Endratno </strong>)</p>
+            <p class="jabatan">Direktur</p>
+          </div>
+        </div>
+
+        <!-- 💳 Rekening -->
+        <div class="rekening-info">
+          <strong>Transfer ke rekening:</strong> Bank OCBC NISP 050800526787 a.n
+          PT Lensiro Digital Solusi
+        </div>
+      </footer>
+    </div>
+
+    <!-- Tombol Cetak -->
+    <div class="print-btn">
+      <button onclick="window.print()">🖨️ Cetak Faktur</button>
+      <button onclick="cetakPDF()">💾 Simpan PDF</button>
+    </div>
+
+    <script src="faktur.js"></script>
+  </body>
+</html>

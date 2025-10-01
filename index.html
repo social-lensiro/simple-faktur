@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Faktur</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>
+      <marquee>Membuat Faktur Sederhana</marquee>
+    </h1>
+
+    <div class="container">
+      <form id="fakturForm">
+        <label align="center">Input Data Customer:</label>
+
+        <label for="nomor">Nomor Faktur:</label>
+        <input
+          type="text"
+          id="nomor"
+          autocomplete="off"
+          placeholder="Masukkan Nomor Faktur"
+          required
+        />
+
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" required />
+        FAKTUR
+        <label for="pelanggan">Nama Pelanggan:</label>
+        <input
+          type="text"
+          id="pelanggan"
+          autocomplete="off"
+          placeholder="Masukkan nama"
+          required
+        />
+
+        <label for="alamat">Alamat:</label>
+        <input
+          type="text"
+          id="alamat"
+          autocomplete="off"
+          placeholder="Masukkan Alamat"
+        />
+
+        <label for="telp">No. Telp:</label>
+        <input
+          type="tel"
+          id="telp"
+          autocomplete="off"
+          placeholder="Masukkan Nomor Telpon"
+        />
+
+        <br /><br /><br />
+
+        <h3 align="center">Tambah Produk</h3>
+        <div class="produk-box">
+          <label for="produk">Nama Produk:</label>
+          <input type="text" id="produk" placeholder="Masukkan nama produk" />
+
+          <label for="jumlah">Jumlah:</label>
+          <input type="number" id="jumlah" value="1" min="1" />
+
+          <label for="harga">Harga:</label>
+          <input type="number" id="harga" value="0" min="0" />
+
+          <button type="button" onclick="tambahProduk()">Tambah Produk</button>
+          <button type="submit">Buat Faktur</button>
+        </div>
+      </form>
+
+      <div id="daftarProduk">
+        <h3>Daftar Produk:</h3>
+        <ul id="produkList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
