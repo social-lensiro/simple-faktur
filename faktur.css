@@ -134,14 +134,14 @@ footer {
   display: flex;
   justify-content: flex-end;
   text-align: right;
-  padding-right: 40px; /* ➕ Tambahkan ini untuk menggeser ke kiri */
+  padding-right: 10px; /* ➕ Tambahkan ini untuk menggeser ke kiri */
 }
 
 .ttd-box {
   text-align: center; /* ⬅️ Ubah dari right ke center agar tulisan di bawah stempel rata tengah */
   width: 250px;
   font-size: 14px;
-  margin-right: 40px; /* Tambahan jarak dari tepi kanan */
+  margin-right: 10px; /* Tambahan jarak dari tepi kanan */
 }
 
 .ttd-area {
@@ -149,7 +149,7 @@ footer {
   display: inline-block;
   width: 200px;
   height: 80px;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 .stempel {
@@ -251,4 +251,3 @@ p:has(#alamatPelanggan),
 p:has(#telpPelanggan) {
   display: none;
 }
-
