@@ -37,36 +37,36 @@ if (fakturData) {
   document.getElementById("total").textContent =
     "Rp " + subtotal.toLocaleString("id-ID");
   document.getElementById("terbilang").textContent =
-    terbilang(subtotal) + " rupiah";
+    terbilang(subtotal) + " Rupiah";
 }
 
 function terbilang(n) {
   const satuan = [
     "",
-    "satu",
-    "dua",
-    "tiga",
-    "empat",
-    "lima",
-    "enam",
-    "tujuh",
-    "delapan",
-    "sembilan",
+    "Satu",
+    "Dua",
+    "Tiga",
+    "Empat",
+    "Lima",
+    "Enam",
+    "Tujuh",
+    "Delapan",
+    "Sembilan",
   ];
   function toWords(num) {
     if (num < 10) return satuan[num];
-    if (num < 20) return num === 10 ? "sepuluh" : satuan[num - 10] + " belas";
+    if (num < 20) return num === 10 ? "Sepuluh" : satuan[num - 10] + " Belas";
     if (num < 100)
-      return satuan[Math.floor(num / 10)] + " puluh " + satuan[num % 10];
-    if (num < 200) return "seratus " + toWords(num - 100);
+      return satuan[Math.floor(num / 10)] + " Puluh " + satuan[num % 10];
+    if (num < 200) return "Seratus " + toWords(num - 100);
     if (num < 1000)
-      return satuan[Math.floor(num / 100)] + " ratus " + toWords(num % 100);
-    if (num < 2000) return "seribu " + toWords(num - 1000);
+      return satuan[Math.floor(num / 100)] + " Ratus " + toWords(num % 100);
+    if (num < 2000) return "Seribu " + toWords(num - 1000);
     if (num < 1000000)
-      return toWords(Math.floor(num / 1000)) + " ribu " + toWords(num % 1000);
+      return toWords(Math.floor(num / 1000)) + " Ribu " + toWords(num % 1000);
     if (num < 1000000000)
       return (
-        toWords(Math.floor(num / 1000000)) + " juta " + toWords(num % 1000000)
+        toWords(Math.floor(num / 1000000)) + " Juta " + toWords(num % 1000000)
       );
     return num;
   }
