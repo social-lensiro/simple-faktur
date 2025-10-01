@@ -178,7 +178,7 @@ footer {
 
 /* Rekening */
 .rekening-info {
-  text-align: right;
+  text-align: left;
   font-size: 14px;
   margin-top: 10px;
   color: #2c3e50;
@@ -249,3 +249,4 @@ p:has(#alamatPelanggan),
 p:has(#telpPelanggan) {
   display: none;
 }
+
