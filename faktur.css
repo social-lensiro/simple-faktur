@@ -66,7 +66,7 @@ header {
   font-size: 14px;
 }
 
-/* Tabel */
+/* Tabel Produk */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -112,7 +112,23 @@ footer {
   color: #444;
 }
 
-/* Tanda tangan & stempel (rata kanan) */
+/* NPWP & Non-PKP Info */
+.npwp-info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.npwp-info p {
+  margin: 2px 0;
+}
+
+.npwp-info em {
+  color: #666;
+}
+
+/* Tanda tangan & stempel */
 .ttd-direktur {
   margin-top: 30px;
   display: flex;
@@ -139,7 +155,7 @@ footer {
   top: -50px;
   left: 70%;
   transform: translateX(-50%);
-  width: 160px; /* 🔸 ukuran lebih besar */
+  width: 160px;
   opacity: 1;
   pointer-events: none;
 }
@@ -173,7 +189,7 @@ footer {
   color: #000;
 }
 
-/* Tombol */
+/* Tombol Cetak */
 .print-btn {
   margin-top: 20px;
   text-align: center;
@@ -201,25 +217,32 @@ footer {
   body {
     background: white;
   }
+
   .print-btn {
     display: none;
   }
+
   .invoice-container {
     box-shadow: none;
     margin: 0;
     padding: 0;
   }
+
   .ttd-box {
     page-break-inside: avoid;
   }
+
   .rekening-info {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
     font-size: 13px;
   }
+
+  .npwp-info {
+    font-size: 11px;
+    color: #000;
+  }
 }
-/* sembuyikan alamat */
+
+/* Sembunyikan alamat pelanggan jika kosong */
 #alamatPelanggan,
 #telpPelanggan,
 p:has(#alamatPelanggan),
